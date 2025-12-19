@@ -1,0 +1,40 @@
+Alert Title: Suspicious Login from New Location
+
+Alert ID: SOC-FP-001
+
+Alert Severity: Medium
+
+Alert Status: False Positive – Closed
+
+Who
+•	User Account: a.smith
+•	Role: Finance Manager
+•	Device: FIN-LAP-07
+
+What
+The SIEM generated an alert for a login attempt from a new geographic location not previously associated with the user account.
+
+When
+•	Timestamp: 2025-01-13 08:15 UTC
+
+Where
+•	Source IP: 192.168.44.12
+•	Location: Remote VPN Gateway
+
+Why (Verdict Reasoning)
+The login was confirmed as legitimate.
+The user was working remotely and successfully authenticated via the company VPN.
+Authentication logs show a valid VPN session established prior to the login event, and no additional suspicious activity was observed.
+
+Actions Taken
+•	VPN logs reviewed and correlated with SIEM alert
+•	User activity monitored for anomalies (none found)
+•	Alert marked as False Positive and closed
+
+Escalation Decision
+•	No escalation required
+•	Activity aligned with expected user behavior
+
+Notes
+This alert highlights the importance of correlating VPN and authentication logs before escalation.
+
