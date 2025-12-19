@@ -1,0 +1,45 @@
+Sample Alert Report – True Positive
+Alert Title: Suspicious Privilege Escalation Detected
+Alert ID: SOC-TP-001
+Alert Severity: High
+Alert Status: True Positive – Escalated to L2
+
+Who
+•	User Account: j.doe
+•	Role: Standard User
+•	Host: FIN-WKS-23
+•	Operating System: Windows 10
+
+What
+The user account j.doe executed a command that added the account to the local Administrators group.
+This action was performed without a corresponding approved change request or IT maintenance window.
+Command observed: net localgroup administrators j.doe /add
+
+When
+•	Start Time: 2025-01-14 10:42 UTC
+•	End Time: 2025-01-14 10:43 UTC
+
+Where
+•	Endpoint: FIN-WKS-23
+•	Source IP: 10.20.15.33 (Internal Network)
+
+Why (Verdict Reasoning)
+The activity represents an unauthorized privilege escalation attempt.
+Verification with the IT team confirmed that no administrative privileges were approved for this user at the time of execution.
+This behavior is consistent with potential account compromise or insider threat activity.
+
+Actions Taken
+•	Alert documented with full investigation details
+•	IT team contacted to validate authorization (no approval found)
+•	Alert escalated to L2 for further investigation and remediation
+
+Escalation Reason
+•	High-risk activity requiring account review and potential containment
+•	Possible credential compromise
+•	Remediation actions (password reset / host review) required
+
+Recommendations
+•	Immediate password reset for the affected user
+•	Review recent authentication logs for lateral movement
+•	Assess endpoint for additional suspicious activity
+
