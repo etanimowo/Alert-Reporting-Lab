@@ -1,7 +1,11 @@
 Sample Alert Report – True Positive
+
 Alert Title: Suspicious Privilege Escalation Detected
+
 Alert ID: SOC-TP-001
+
 Alert Severity: High
+
 Alert Status: True Positive – Escalated to L2
 
 Who
